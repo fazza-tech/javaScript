@@ -37,3 +37,47 @@ console.log(greatFour);
 
 //reduce
 
+const redArr = [5,1,3,2,6];
+
+// sum or arrays
+
+function findSum(redArr){
+    let sum =0;
+    for(let i =0;i<redArr.length;i++){
+        sum= sum+redArr[i];
+    }
+    return sum;
+}
+
+console.log(findSum(redArr));
+
+//solving above problem with reduce
+
+const result = redArr.reduce(function(acc,curr){
+    acc= acc + curr;
+    return acc;
+}, 0);
+console.log(result); //output will be the same;
+
+// max of arrays
+
+function findMax(redArr){
+    let max =0;
+    for(let i = 0;i<redArr.length;i++){
+        if(redArr[i]>max){
+            max = redArr[i];
+        }
+    }
+    return max
+}
+console.log(findMax(redArr)); //6 is greater
+
+// max of array using reduce
+const result1 = redArr.reduce(function(max,b){
+    if(b > max){
+        max =b;
+    }
+    return max;
+},0);
+
+console.log(result1);
