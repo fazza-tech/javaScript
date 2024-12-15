@@ -81,3 +81,23 @@ const result1 = redArr.reduce(function(max,b){
 },0);
 
 console.log(result1);
+
+//another examples of map
+
+//this showing is user data from an api
+const users = [
+    { firstName: "Akshay", lastName: "Saini", age: 26},
+    { firstName: "Fasal", lastName: "Mammasrayil", age: 26},
+    { firstName: "Hari", lastName: "Pappadi", age: 26},
+    { firstName: "Sunny", lastName: "Weine", age: 26}
+];
+
+
+//taking list of full name by map
+
+const takeFullName = users.map((x) => x.firstName+" "+x.lastName);
+console.log(takeFullName);
+
+let i = 5; 
+console.log(++i)
+console.log(i);
